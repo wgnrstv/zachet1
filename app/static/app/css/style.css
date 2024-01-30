@@ -23,7 +23,7 @@ a:visited{
 .white {color: #ffffff;}
 
 .highlight {color: #f53f2c;}
-h1 {font-size: 100px;}
+h1 {font-size: 95px;}
 h2 {font-family: 'Pacifico', cursive;}
 h4 {font-weight: 600;}
 
@@ -150,8 +150,10 @@ HERO SECTION
 }
 
 #hero h1 {
-    font-weight: 800;
-    text-transform: uppercase;
+    /*font-weight: 800;*/
+    /*text-transform: uppercase;*/
+    font-family: 'Pacifico';
+    letter-spacing: 5px;
     line-height: .8em;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 

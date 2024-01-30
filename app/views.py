@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import get_random_text
 from django.http import HttpRequest, JsonResponse
 from django.shortcuts import redirect
 from django.contrib.auth import login, logout, authenticate
@@ -65,3 +66,9 @@ def index_view(request):
 def user_detail_view(request):
     if request.method == "GET":
         return render(request, 'app/user_details.html')
+
+def get_text_json(request):
+    if request.method == "GET":
+        return JsonResponse({"text": get_random_text()},
+                            json_dumps_params={"ensure_ascii": False})
+

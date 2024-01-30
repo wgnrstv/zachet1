@@ -44,6 +44,14 @@
         <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+    #modal {
+    /* Добавьте здесь стили для всплывающего окна */
+    max-width: 300px;
+    word-wrap: break-word;
+    text-align: center;
+}
+    </style>
 </head>
 
 <body style="background: url( {%  static 'app/img/bg.jpg' %}); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh;">
@@ -56,8 +64,8 @@
             <div class="container text-center">
                 <img class="santaicon wow tada infinite" data-wow-duration="20s" src="{% static 'app/img/santa-sm.png' %}" alt="">
                 <div class="sectionhead">            
-                    <h2>Нажми на <span class="highlight">Санту</span> чтобы узнать что тебя ждёт!</h2>
-                    <p>Чтобы выйти из аккаунта и вернуться на главную, <a href="{% url 'app:logout' %}" class="btn btn-inverse">нажми</a></p>
+                    <h2>Нажми на <span class="highlight">Санту</span>, чтобы узнать, что тебя ждёт!</h2>
+                    <p>Чтобы выйти из аккаунта и вернуться на главную, <a href="{% url 'app:logout' %}" class="btn btn-inverse">нажми кнопку</a></p>
                 </div><!--SECTIONHEAD END-->            
 
             </div><!--SUBSCRIBE CONTAINER END-->
@@ -121,6 +129,7 @@
     <script src="{% static 'app/js/evenfly.js' %}"></script>
     <script src="{% static 'app/js/wow.min.js' %}"></script>
     <script src="{% static 'app/js/snowstorm-min.js' %}"></script>
-    <script>new WOW().init();</script>    
+    <script src="{% static 'app/js/text_view.js' %}"></script>
+    <script>new WOW().init();</script>
 </body>
 </html>
