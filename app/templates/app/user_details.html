@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===========================
+    THEME INFO
+    =========================== -->    
+    <meta name="description" content="SantaGo is another free Bootstrap HTML Christmas sales and affiliate page template built and distributed by EvenFly Team as a small Cristmas gift under Creative Commons 3.0 license.">
+    <meta name="keywords" content="Christmas Template, Free Christmas Landing Page, Christmas Affiliate Landing Page, Free Christmas Sales Page Template">
+    <meta name="author" content="Mamun Srizon">
+    
+    <!-- ===========================
+    SITE TITLE
+    =========================== -->
+    <title>Личный кабинет</title>
+    
+    <!-- ===========================
+    FAVICONS
+    =========================== -->
+    <link rel="icon" href="{% static 'app/img/favicon.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'app/img/apple-touch-icon-ipad-retina.png' %}" />
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'app/img/apple-touch-icon-iphone-retina.png' %}" />
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'app/img/apple-touch-icon-ipad.png' %}" />
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'app/img/apple-touch-icon-iphone.png' %}" />
+    
+    <!-- ===========================
+    STYLESHEETS
+    =========================== --> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/animate.css' %}">
+    
+    <!-- ===========================
+    FONTS
+    =========================== -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,900,600|Pacifico' rel='stylesheet' type='text/css'>
+
+
+    <!--[if IE]>
+        <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body style="background: url( {%  static 'app/img/bg.jpg' %}); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh;">
+
+    <!-- ===========================
+    SUBSCRIBE SECTION
+    =========================== -->
+    <div id="subscribe">
+        <div class="darkoverlay">
+            <div class="container text-center">
+                <img class="santaicon wow tada infinite" data-wow-duration="20s" src="{% static 'app/img/santa-sm.png' %}" alt="">
+                <div class="sectionhead">            
+                    <h2>Нажми на <span class="highlight">Санту</span> чтобы узнать что тебя ждёт!</h2>
+                    <p>Чтобы выйти из аккаунта и вернуться на главную, <a href="{% url 'app:logout' %}" class="btn btn-inverse">нажми</a></p>
+                </div><!--SECTIONHEAD END-->            
+
+            </div><!--SUBSCRIBE CONTAINER END-->
+        </div><!--OVERLAY END-->
+    </div><!--SUBSCRIBE SECTION END-->        
+
+    <!-- ===========================
+    SOCIAL ICONS
+    =========================== -->
+    <div class="sticky-container">
+		<ul class="sticky">
+			<li>
+				<a href="">
+                    <img title="" alt="" src="{% static 'app/img/facebook.svg' %}" />
+                    <p>Facebook</p>
+				</a>
+			</li>
+			
+			<li>
+				<a href="">
+                    <img title="" alt="" src="{% static 'app/img/twitter.svg' %}" />
+                    <p>Twitter</p>
+				</a>
+			</li>
+			
+			<li>
+				<a href="">
+                    <img title="" alt="" src="{% static 'app/img/pinterest.svg' %}" />
+                    <p>Pinterest</p>
+				</a>
+			</li>
+			
+			<li>
+				<a href="">
+                    <img title="" alt="" src="{% static 'app/img/linkedin.svg' %}" />
+                    <p>Linkedin</p>
+				</a>
+			</li>
+			
+			<li>
+			    <a href="">
+                    <img title="" alt="" src="{% static 'app/img/google_plus.svg' %}" />
+                    <p>Google Plus</p>
+				</a>
+			</li>
+			
+			<li>
+			    <a href="">
+                    <img title="" alt="" src="{% static 'app/img/instagram.svg' %}" />
+                    <p>Instagram</p>
+				</a>
+			</li>
+
+		</ul>
+	</div>
+    <!-- ===========================
+    NECESSARY SCRIPTS
+    =========================== --> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' %}"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'app/js/evenfly.js' %}"></script>
+    <script src="{% static 'app/js/wow.min.js' %}"></script>
+    <script src="{% static 'app/js/snowstorm-min.js' %}"></script>
+    <script>new WOW().init();</script>    
+</body>
+</html>

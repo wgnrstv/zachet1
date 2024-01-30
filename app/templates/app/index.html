@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===========================
+    THEME INFO
+    =========================== -->    
+    <meta name="description" content="SantaGo is another free Bootstrap HTML Christmas sales and affiliate page template built and distributed by EvenFly Team as a small Cristmas gift under Creative Commons 3.0 license.">
+    <meta name="keywords" content="Christmas Template, Free Christmas Landing Page, Christmas Affiliate Landing Page, Free Christmas Sales Page Template">
+    <meta name="author" content="Mamun Srizon">
+    
+    <!-- ===========================
+    SITE TITLE
+    =========================== -->
+    <title>SantaGo - Free Christmas Sales and Affiliate Landing Page Template</title>
+    
+    <!-- ===========================
+    FAVICONS
+    =========================== -->
+    <link rel="icon" href="{% static 'app/img/favicon.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'app/img/apple-touch-icon-ipad-retina.png' %}" />
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'app/img/apple-touch-icon-iphone-retina.png' %}" />
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'app/img/apple-touch-icon-ipad.png' %}" />
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'app/img/apple-touch-icon-iphone.png' %}" />
+    
+    <!-- ===========================
+    STYLESHEETS
+    =========================== --> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/animate.css' %}">
+
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,900,600|Pacifico' rel='stylesheet' type='text/css'>
+
+    <!--[if IE]>
+        <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- ===========================
+    HERO SECTION
+    =========================== -->
+    <div id="hero">
+        <div class="redoverlay">
+            <div class="container">
+                <div class="row">
+                    <div class="herotext">
+                        <h2 class="wow zoomInDown" data-wow-duration="3s">Самое время</h2>
+                        <h1 class="wow flipInY">Узнать что в мешке!</h1>
+                    </div>
+
+                    <div class="santa wow bounceInDown" data-wow-duration="2s">
+                        <img src="{% static 'app/img/santa.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--HERO SECTION END-->
+    
+    <!-- ===========================
+    OVERVIEW SECTION
+    =========================== --> 
+    <div id="overview" class="container">       
+        <!--SECTIONHEAD START-->
+        <div class="sectionhead">
+            <a class="btn btn-reverse wow zoomIn" href="{% url 'app:login' %}">
+                            <h3>Авторизируйся</h3>
+                        </a>
+            <h2><span class="highlight">или</span></h2>
+            <a class="btn btn-reverse wow zoomIn" href="{% url 'app:register' %}">
+                            <h3>Зарегистрируйся</h3>
+                        </a>
+        </div><!--SECTIONHEAD END-->
+    </div><!--OVERVIEW SECTION END-->
+
+    <!-- ===========================
+    FOOTER
+    =========================== -->
+    <footer class="container text-center">             
+        <h2 class="logo"><span class="white">Не очень тайный</span><span class="highlight">Санта</span></h2>
+        <img class="santacap" src="{% static 'app/img/santa_cap.png' %}" alt="">
+    </footer><!--FOOTER END-->
+    
+    <!-- ===========================
+    SOCIAL ICONS
+    =========================== -->
+    <div class="sticky-container">
+		<ul class="sticky">
+			<li>
+				<a href="">
+                    <img title="" alt="" src="{% static 'app/img/facebook.svg' %}" />
+                    <p>Facebook</p>
+				</a>
+			</li>
+			
+			<li>
+				<a href="">
+                    <img title="" alt="" src="{% static 'app/img/twitter.svg' %}" />
+                    <p>Twitter</p>
+				</a>
+			</li>
+			
+			<li>
+				<a href="">
+                    <img title="" alt="" src="{% static 'app/img/pinterest.svg' %}" />
+                    <p>Pinterest</p>
+				</a>
+			</li>
+			
+			<li>
+				<a href="">
+                    <img title="" alt="" src="{% static 'app/img/linkedin.svg' %}" />
+                    <p>Linkedin</p>
+				</a>
+			</li>
+			
+			<li>
+			    <a href="">
+                    <img title="" alt="" src="{% static 'app/img/google_plus.svg' %}" />
+                    <p>Google Plus</p>
+				</a>
+			</li>
+			
+			<li>
+			    <a href="">
+                    <img title="" alt="" src="{% static 'app/img/instagram.svg' %}" />
+                    <p>Instagram</p>
+				</a>
+			</li>
+
+		</ul>
+	</div>
+    <!-- ===========================
+    NECESSARY SCRIPTS
+    =========================== --> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' %}"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'app/js/evenfly.js' %}"></script>
+{#    <script src="{% static 'app/js/jquery.nicescroll.min.js' %}"></script>#}
+    <script src="{% static 'app/js/wow.min.js' %}"></script>
+    <script src="{% static 'app/js/snowstorm-min.js' %}"></script>
+    <script>new WOW().init();</script>    
+</body>
+</html>

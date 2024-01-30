@@ -1,0 +1,14 @@
+from django.urls import path
+from .views import template_view, index_view, login_view, register_view, reset_view, logout_view, user_detail_view
+
+app_name = 'app'
+
+urlpatterns = [
+    path('', index_view, name='index'),
+    path('template/', template_view, name='template'),
+    path('login/', login_view, name='login'),
+    path('register/', register_view, name='register'),
+    path('reset/password', reset_view, name='reset'),
+    path('logout', logout_view, name='logout'),
+    path('profile/', user_detail_view, name='user_profile'),
+]

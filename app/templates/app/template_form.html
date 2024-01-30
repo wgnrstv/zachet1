@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Ваша форма для тренировки</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="{% static 'app/style.css' %}" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-6 form-block px-4">
+				<div class="col-lg-8 col-md-6 col-sm-8 col-xs-12 form-box">
+					<h4 class="text-center mb-4">
+						Заголовок вашей формы
+					</h4>
+					<form method="post">
+                        {% csrf_token %}
+						<!-- Запишите здесь тег {% csrf_token %} -->
+
+                        <label for="my_text">Введи своё имя</label>  <!--for="my_text" это привязка к объекту с id="my_text", id - всегда должен быть уникален во всем HTML документе-->
+                        <div class="form-input">  <!-- Блок для оборачивания строки формы -->
+                            <span><i class="fa fa-id-card"></i></span>  <!-- Fontawesom картинка в строке ввода-->
+							<input type="text" id="my_text" name="my_text" placeholder="Иван" required>  <!-- Строка ввода-->
+						</div>
+                        <!-- Поле с выбором -->
+                        <label for="my_select">Выберите свои знания в Python</label>
+                        <div class="form-input">
+							<span><i class="fa fa-free-code-camp"></i></span>
+                            <select id="my_select" name="my_select" required>
+                                <option value="begin">Начальные</option>
+                                <option value="middle">Средние</option>
+                                <option value="snake_speek">Разговариваю со змеями</option>
+                            </select>
+						</div>
+                        <!-- Многострочное поле -->
+                        <label for="my_textarea">Расскажи о себе</label>
+                        <div class="form-input">
+                            <textarea id="my_textarea" name="my_textarea" rows="10" placeholder="Начни писать здесь" required></textarea>
+                        </div>
+
+                        <!-- Добавьте своих полей --------------------------------------------------------------------->
+                        <!-- Сформируйте и заполните нужные строки ввода (оберните их <div class="form-input"> как показано выше. Это нужно чтобы были одинаковые стили)-->
+
+                        <!---- Добавьте еще поле для ввода email (придумайте текст для label)---->
+
+                        <!---- Добавьте еще поле для ввода пароля (придумайте текст для label)---->
+
+                        <!---- Добавьте еще поле для ввода даты (придумайте текст для label)---->
+
+                        <!---- Добавьте еще поле для ввода целого значения (придумайте текст для label)---->
+
+                        <!---- Добавьте еще поле для переключателя checkbox (придумайте текст для label)---->
+                        <!--------------------------------------------------------------------------------------------->
+
+                        <!-- В форме всегда присутствует кнопка чтобы что-то отправить. Кнопку не изменять! -->
+						<div class="mb-3"> 
+							<button type="submit" class="btn btn-block">
+								Отправить данные
+							</button>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="{% static 'app/js/snowstorm-min.js' %}"></script>
+</body>
+</html>
