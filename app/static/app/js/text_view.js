@@ -47,7 +47,10 @@ function fetchText(callback) {
                 callback(data.text);
             }
         })
-        .catch(error => console.error('Ошибка при получении текста:', error));
+        .catch(error => {
+            console.error('Ошибка при получении текста:', error);
+            callback('Ой, что-то не так, не могу получить данные с адреса http://127.0.0.1:8000/get/text/ проверьте доступность адреса!');
+        });
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -73,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Запуск таймера исчезновения окна после завершения анимации
                     setTimeout(function() {
                         fadeOutModal('modal');
-                    }, 3000);
+                    }, 5000);
                 });
             });
         }
