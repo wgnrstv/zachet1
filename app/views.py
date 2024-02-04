@@ -48,14 +48,6 @@ def register_view(request):
         return render(request, 'app/register.html')
 
 
-def reset_view(request):
-    if request.method == "GET":
-        return render(request, 'app/reset.html')
-
-    if request.method == "POST":
-        return render(request, 'app/register.html')
-
-
 def index_view(request):
     if request.method == "GET":
         if request.user.is_authenticated:
